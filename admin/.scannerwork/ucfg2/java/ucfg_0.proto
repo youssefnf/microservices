@@ -1,0 +1,22 @@
+
+Ima.ticket.admin.controller.AdminController#getAllAdmins()Ljava/util/List;n
+d/D:/5MG/Projects/qualite/backend/admin/src/main/java/ma/ticket/admin/controller/AdminController.java (#"1*š
+1 (¡
+ž
+ (.
+%0(ma.ticket.admin.service.AdminServiceImpl"__id*\
+
+__unknown_file (@*>,
+*ma.ticket.admin.controller.AdminController"
+adminServiceÂ¿
+ (&
+%1java.util.List"Cma.ticket.admin.service.AdminServiceImpl#getAdmin()Ljava/util/List;*L
+
+__unknown_file (0
+.
+%0(ma.ticket.admin.service.AdminServiceImpl2
+getAdmin()""
+ ('
+
+%1java.util.ListB.,
+*ma.ticket.admin.controller.AdminControllerH

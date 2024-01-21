@@ -1,0 +1,13 @@
+.add-client-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .add-client-card {
+    margin: 20px; 
+    padding: 20px; 
+  }.hint {
+    color: #56b94b; /* Replace with your desired primary color */
+    font-weight: bold;
+    cursor: pointer;
+  }

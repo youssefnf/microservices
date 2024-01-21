@@ -1,0 +1,2 @@
+ma.ticket.reservation.service.ReservationService#deleteReservation(Ljava/lang/Long;)Z
+java.util.Optional#isPresent()Z

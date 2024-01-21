@@ -1,0 +1,47 @@
+<mat-card class="add-client-card">
+    <h2 class="form-title">Modifier Evenement</h2>
+    <form #evenementForm="ngForm" class="add-client-form" (submit)="updateEvent(evenementForm.value)">
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Nom</mat-label>
+            <input matInput [(ngModel)]="data.nom" type="text" name="nom" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Lieu</mat-label>
+            <input matInput [(ngModel)]="data.lieu" type="text" name="lieu" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Description</mat-label>
+            <input matInput [(ngModel)]="data.description" type="text" name="description" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Type</mat-label>
+            <input matInput [(ngModel)]="data.type" type="text" name="type" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Nombre de ticket</mat-label>
+            <input matInput [(ngModel)]="data.nbTicket" type="number" name="nbTicket" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Prix</mat-label>
+            <input matInput [(ngModel)]="data.prix" type="number" name="prix" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="data.date" (dateChange)="onDateChange($event)" name="date">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button [ngStyle]="{ 'background-color': '#2ED47A', 'color': 'white' }"
+            class="submit-button"
+            style="grid-column: span 4; width: 150px;margin: auto;"><mat-icon>save_alt</mat-icon>Enregistrer</button>
+    </form>
+</mat-card>

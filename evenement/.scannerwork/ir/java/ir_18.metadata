@@ -1,0 +1,3 @@
+ma.ticket.evenement.service.EventServiceImpl#modifierEvent(Lma/ticket/evenement/entity/Event;)Lma/ticket/evenement/entity/Event;
+java.util.Optional#isPresent()Z
+java.util.Optional#get()Ljava/lang/Object;

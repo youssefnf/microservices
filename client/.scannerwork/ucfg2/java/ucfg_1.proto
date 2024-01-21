@@ -1,0 +1,36 @@
+
+zma.ticket.client.service.ClientServiceImpl#ajouterClient(Lma/ticket/client/entity/Client;)Lma/ticket/client/entity/Client;o
+e/D:/5MG/Projects/qualite/backend/client/src/main/java/ma/ticket/client/service/ClientServiceImpl.java ("startingBlock*œ
+startingBlock ()–
+“
+ (
+%1"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+ama.ticket.client.entity.Clientc
+a
+' ((#
+ama.ticket.client.entity.Client"__annotation*"
+
+__unknown_file (
+
+%1*
+1*Í
+1 (©
+¦
+ (2
+%0,ma.ticket.client.repository.ClientRepository"__id*`
+
+__unknown_file (D*B,
+*ma.ticket.client.service.ClientServiceImpl"
+clientRepository"
+ ((
+"":/
+  ((#
+ama.ticket.client.entity.ClientB.,
+*ma.ticket.client.service.ClientServiceImplH

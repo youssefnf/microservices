@@ -1,0 +1,4 @@
+ma.ticket.admin.service.AdminServiceImpl#existAdmin(Ljava/lang/String;Ljava/lang/String;)Z
+java.util.Optional#isPresent()Z
+==
+findByUsernameAndMdp ma.ticket.admin.repository.AdminRepository#findByUsernameAndMdp(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;

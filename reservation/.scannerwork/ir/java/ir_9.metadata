@@ -1,0 +1,4 @@
+ma.ticket.reservation.controller.ReservationController#editVoiture(Lma/ticket/reservation/entity/Reservation;)LResponseEntity;
+null
+==
+editReservation ma.ticket.reservation.service.ReservationService#editReservation(Lma/ticket/reservation/entity/Reservation;)Lma/ticket/reservation/models/ReservationResponse;

@@ -1,0 +1,7 @@
+organization=othmane
+projectKey=othmane_client
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.51767
+dashboardUrl=https://sonarcloud.io/dashboard?id=othmane_client
+ceTaskId=AYzAu2W4dQeBgNtVRq4Q
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYzAu2W4dQeBgNtVRq4Q

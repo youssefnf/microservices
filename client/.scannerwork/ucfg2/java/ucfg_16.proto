@@ -1,0 +1,21 @@
+
+Lma.ticket.client.controller.ClientController#getAllClients()Ljava/util/List;q
+g/D:/5MG/Projects/qualite/backend/client/src/main/java/ma/ticket/client/controller/ClientController.java (%"1*¥
+1 (¦
+£
+ (0
+%0*ma.ticket.client.service.ClientServiceImpl"__id*_
+
+__unknown_file (C*A.
+,ma.ticket.client.controller.ClientController"
+clientServiceÈÅ
+ ((
+%1java.util.List"Fma.ticket.client.service.ClientServiceImpl#getClient()Ljava/util/List;*N
+
+__unknown_file (2
+0
+%0*ma.ticket.client.service.ClientServiceImpl2getClient()""
+ ()
+
+%1java.util.ListB0.
+,ma.ticket.client.controller.ClientControllerH

@@ -1,0 +1,13 @@
+ma.ticket.client.service.ClientServiceImpl#modifierClient(Lma/ticket/client/entity/Client;)Lma/ticket/client/entity/Client;
+java.util.Optional#isPresent()Z
+java.util.Optional#get()Ljava/lang/Object;
+==
+setEmail ma.ticket.client.entity.Client#setEmail(Ljava/lang/String;)V
+getIdClient ma.ticket.client.entity.Client#getIdClient()Ljava/lang/Long;
+getNom ma.ticket.client.entity.Client#getNom()Ljava/lang/String;
+getTel ma.ticket.client.entity.Client#getTel()Ljava/lang/String;
+setTel ma.ticket.client.entity.Client#setTel(Ljava/lang/String;)V
+setNom ma.ticket.client.entity.Client#setNom(Ljava/lang/String;)V
+getEmail ma.ticket.client.entity.Client#getEmail()Ljava/lang/String;
+getPrenom ma.ticket.client.entity.Client#getPrenom()Ljava/lang/String;
+setPrenom ma.ticket.client.entity.Client#setPrenom(Ljava/lang/String;)V

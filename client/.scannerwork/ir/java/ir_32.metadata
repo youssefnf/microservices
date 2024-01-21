@@ -1,0 +1,4 @@
+ma.ticket.client.controller.ClientController#addClient(Lma/ticket/client/entity/Client;)LResponseEntity;
+null
+==
+ajouterClient ma.ticket.client.service.ClientServiceImpl#ajouterClient(Lma/ticket/client/entity/Client;)Lma/ticket/client/entity/Client;

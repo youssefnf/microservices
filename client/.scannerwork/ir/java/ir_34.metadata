@@ -1,0 +1,4 @@
+ma.ticket.client.controller.ClientController#deleteClient(Ljava/lang/Long;)LResponseEntity;
+null
+==
+supprimerClient ma.ticket.client.service.ClientServiceImpl#supprimerClient(Ljava/lang/Long;)V

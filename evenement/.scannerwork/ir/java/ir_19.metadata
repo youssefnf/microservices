@@ -1,0 +1,2 @@
+ma.ticket.evenement.service.EventServiceImpl#supprimerEvent(Ljava/lang/Long;)Z
+java.util.Optional#isPresent()Z

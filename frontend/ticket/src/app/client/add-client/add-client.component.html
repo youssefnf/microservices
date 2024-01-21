@@ -1,0 +1,41 @@
+<mat-card class="add-client-card">
+    <h2 class="form-title">Ajouter Client</h2>
+    <form #clientForm="ngForm" class="add-client-form" (submit)="addNewClient(clientForm.value)">
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Nom</mat-label>
+            <input matInput [(ngModel)]="client.nom" type="text" name="nom" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Prénom</mat-label>
+            <input matInput [(ngModel)]="client.prenom" type="text" name="prenom" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="client.email" type="text" name="email" />
+        </mat-form-field>
+
+
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Téléphone</mat-label>
+            <input matInput [(ngModel)]="client.tel" type="text" name="tel" pattern="[0-9]*" required />
+            <mat-error *ngIf="clientForm.controls['tel'].hasError('pattern')">
+                Le téléphone doit contenir uniquement des chiffres.
+            </mat-error>
+        </mat-form-field>
+
+
+        <!-- <button type="submit" mat-raised-button [ngStyle]="{ 'background-color': '#2ED47A', 'color': 'white' }"
+            class="submit-button"
+            style="grid-column: span 4; width: 150px;margin: auto;"><mat-icon>save_alt</mat-icon>Enregistrer</button> -->
+
+        <button type="submit" mat-raised-button [ngStyle]="{'background-color': '#2ED47A', 'color': 'white'}"
+            class="submit-button" style="grid-column: span 4; width: 150px; margin: auto;"
+            [disabled]="clientForm.invalid">
+            <mat-icon>save_alt</mat-icon> Enregistrer
+        </button>
+    </form>
+</mat-card>

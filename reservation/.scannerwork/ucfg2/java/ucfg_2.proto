@@ -1,0 +1,55 @@
+
+A__sonar_lambda_0$ma.ticket.reservation.service.ReservationService 
+•/D:/Preparation2/S9/JEE/ANGULARPROJECTS/ProjetEssabar/NEW/Back/ticket/reservation/src/main/java/ma/ticket/reservation/service/ReservationService.java)! )(s"startingBlock*ë
+startingBlock)! )(s´
+±
+
+__unknown_file (0
+clients%ma.ticket.reservation.entity.Client[]"__id*]
+
+__unknown_file (A*?2
+0ma.ticket.reservation.service.ReservationService"	
+clients±
+®
+
+__unknown_file (.
+events$ma.ticket.reservation.entity.Event[]"__id*\
+
+__unknown_file (@*>2
+0ma.ticket.reservation.service.ReservationService"
+eventsß
+Ü
+
+__unknown_file (K
+ReservationService.this0ma.ticket.reservation.service.ReservationService"__id*m
+
+__unknown_file (Q*O2
+0ma.ticket.reservation.service.ReservationService"
+ReservationService.this*
+1*ð
+1)> )(Vš
+—
+)> )(s6
+%70ma.ticket.reservation.models.ReservationResponse"òma.ticket.reservation.service.ReservationService#mapToReservationResponse(Lma/ticket/reservation/entity/Reservation;[Lma/ticket/reservation/entity/Client;[Lma/ticket/reservation/entity/Event;)Lma/ticket/reservation/models/ReservationResponse;*i
+
+__unknown_file (M
+K
+ReservationService.this0ma.ticket.reservation.service.ReservationService*U
+
+__unknown_file (9
+7
+reservation(ma.ticket.reservation.entity.Reservation*N
+
+__unknown_file (2
+0
+clients%ma.ticket.reservation.entity.Client[]*L
+
+__unknown_file (0
+.
+events$ma.ticket.reservation.entity.Event[]"D
+)> )(s8
+6
+%70ma.ticket.reservation.models.ReservationResponse:C
+)" )(97
+reservation(ma.ticket.reservation.entity.ReservationB
+java.util.function.Function

@@ -1,0 +1,65 @@
+<mat-card class="table-card">
+
+    <div class="table-container" id="tableContainer" style="overflow: auto; height: 370px">
+      <table mat-table [dataSource]="reservations" class="mat-elevation-z8">
+        <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+          <th mat-header-cell class="header-cellss" *matHeaderCellDef>
+            <ng-container>{{ column }}</ng-container>
+          </th>
+  
+          <td mat-cell *matCellDef="let reservations">
+            <ng-container [ngSwitch]="column">
+              <ng-container *ngSwitchCase="'Action'">
+                <div class="action-container">
+                  <button mat-icon-button class="action-button" (click)="openEditDialog(reservations)">
+                    <mat-icon class="action-icon">edit</mat-icon>
+                  </button>
+  
+                  
+                  <button (click)="openDeleteDialog(reservations)" mat-icon-button class="action-button red-icon">
+                    <mat-icon class="action-icon">delete</mat-icon>
+                  </button>
+                </div>
+              </ng-container>
+  
+              <ng-container *ngSwitchCase="'ID'">
+                {{
+                reservations.idReservation
+                }}
+               </ng-container>
+              <ng-container *ngSwitchCase="'Client'">
+                {{
+                reservations.client?.nom + " " + reservations.client?.prenom ||
+                "N/A" | titlecase
+                }}
+              </ng-container>
+              <ng-container *ngSwitchCase="'Evenement'">
+                {{ reservations.event?.nom  ||
+                "N/A" | titlecase }}
+              </ng-container>
+             
+              <ng-container *ngSwitchCase="'Nombre de ticket'" >
+                {{ reservations.nbTicket  }}
+              </ng-container>
+
+              <ng-container *ngSwitchCase="'Prix'">
+                {{ reservations.event.prix * reservations.nbTicket  }}
+              </ng-container>
+  
+              
+            </ng-container>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  
+        <tr mat-row *matRowDef="let sessionRow; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  
+    <mat-paginator [length]="nb" [pageSizeOptions]="[5, 10, 20]" aria-label="Select page"
+      (page)="onPageChange($event)"></mat-paginator>
+  
+    
+  </mat-card>
+  

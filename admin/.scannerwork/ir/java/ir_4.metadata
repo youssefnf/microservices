@@ -1,0 +1,4 @@
+ma.ticket.admin.controller.AdminController#deleteAdmin(I)LResponseEntity;
+null
+==
+supprimerAdmin ma.ticket.admin.service.AdminServiceImpl#supprimerAdmin(I)V

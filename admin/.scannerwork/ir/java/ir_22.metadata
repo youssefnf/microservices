@@ -1,0 +1,3 @@
+ma.ticket.admin.service.AdminServiceImpl#modifierAdmin(Lma/ticket/admin/entity/Admin;)V
+java.util.Optional#isPresent()Z
+java.util.Optional#get()Ljava/lang/Object;

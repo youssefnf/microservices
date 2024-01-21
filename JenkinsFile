@@ -1,0 +1,143 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven'
+    }
+
+    stages {
+        stage('Git Clone') {
+            steps {
+                script {
+                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/othmaneer/SonarJenkins.git']]])
+
+                }
+            }
+        }
+
+                stage('Build Docker') {
+                    steps {
+                        script {
+                            // Navigate into the project directory before running Maven commands
+                            dir('admin') {
+                                bat 'mvn clean install package'
+                            }
+                            dir('client') {
+                                bat 'mvn clean install package'
+                            }
+                            dir('evenement') {
+                                bat 'mvn clean install package'
+                            }
+
+                            dir('reservation') {
+                                bat 'mvn clean install package'
+                            }
+                            dir('gate') {
+                                bat 'mvn clean install package'
+                            }
+                            dir('server') {
+                                bat 'mvn clean install package'
+                            }
+                        }
+                    }
+                }
+
+
+
+
+                     stage('Create Docker Images and run') {
+                    steps {
+                        script {
+
+                                bat "docker-compose down"
+
+                                bat "docker-compose up --build -d"
+
+
+
+                        }
+                    }
+                }
+
+stage('Build Server') {
+    steps {
+    script{
+        dir('server') {
+
+            withSonarQubeEnv('SonarServer') {
+                bat "mvn clean verify sonar:sonar"
+            }
+
+                }
+
+
+    }
+    }
+}
+
+
+stage('Build Admin') {
+    steps {
+    script{
+        dir('admin') {
+
+            withSonarQubeEnv('SonarServer') {
+                bat "mvn clean verify sonar:sonar"
+            }
+
+                }
+
+
+    }
+    }
+}
+
+stage('Build Client') {
+    steps {
+    script{
+        dir('client') {
+
+            withSonarQubeEnv('SonarServer') {
+                bat "mvn clean verify sonar:sonar"
+            }
+
+                }
+
+
+    }
+    }
+}
+
+stage('Build Evenement') {
+    steps {
+    script{
+        dir('evenement') {
+
+            withSonarQubeEnv('SonarServer') {
+                bat "mvn clean verify sonar:sonar"
+            }
+
+                }
+
+
+    }
+    }
+}
+
+stage('Build Reservation') {
+    steps {
+    script{
+        dir('reservation') {
+
+            withSonarQubeEnv('SonarServer') {
+                bat "mvn clean verify sonar:sonar"
+            }
+
+                }
+
+
+    }
+    }
+}
+
+    }
+}

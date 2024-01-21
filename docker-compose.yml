@@ -1,0 +1,117 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      #MYSQL_DATABASE: clientdb,voituredb
+    ports:
+      - "3307:3306"
+
+  ticket_server:
+    container_name: ticket-server
+    build: ./server
+    ports:
+      - "8761:8761"
+    expose:
+      - "8761"
+    environment:
+      SPRING_APPLICATION_NAME: serveur-service
+      SERVER_PORT: 8761
+      EUREKA_CLIENT_REGISTER_WITH_EUREKA: "false"
+      EUREKA_CLIENT_FETCH_REGISTRY: "false"
+
+  ticket_gateway:
+    container_name: gateway-server
+    build: ./gate
+    ports:
+      - "8888:8888"
+    expose:
+      - "8888"
+    environment:
+      SPRING_APPLICATION_NAME: Gateway
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://ticket-server:8761/eureka
+    depends_on:
+      - ticket_server
+
+
+  ticket_client:
+    container_name: client-service
+    build: ./client
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    depends_on:
+      - ticket_server
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/clientdb?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      DISCOVERY_SERVICE_URL: http://ticket-server:8761/eureka
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/actuator/health" ]
+      interval: 10s
+      retries: 3
+
+  ticket_admin:
+    container_name: admin-service
+    build: ./admin
+    ports:
+      - "8083:8083"
+    expose:
+      - "8083"
+    depends_on:
+      - ticket_server
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/admin_service?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      DISCOVERY_SERVICE_URL: http://ticket-server:8761/eureka
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8083/actuator/health" ]
+      interval: 10s
+      retries: 3
+
+  ticket_event:
+    container_name: event-service
+    build: ./evenement
+    ports:
+      - "8084:8084"
+    expose:
+      - "8084"
+    depends_on:
+      - ticket_server
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/event_service_qualite?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      DISCOVERY_SERVICE_URL: http://ticket-server:8761/eureka
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8084/actuator/health" ]
+      interval: 10s
+      retries: 3
+
+
+  ticket_reservation:
+    container_name: reservation-service
+    build: ./reservation
+    ports:
+      - "8085:8085"
+    expose:
+      - "8085"
+    depends_on:
+      - ticket_server
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/reservation_microserv_qualite?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      DISCOVERY_SERVICE_URL: http://ticket-server:8761/eureka
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8085/actuator/health" ]
+      interval: 10s
+      retries: 3

@@ -1,0 +1,6 @@
+ma.ticket.reservation.service.ReservationService#mapToReservationResponse(Lma/ticket/reservation/entity/Reservation;[Lma/ticket/reservation/entity/Client;[Lma/ticket/reservation/entity/Event;)Lma/ticket/reservation/models/ReservationResponse;
+java.util.Arrays#stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
+java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;
+==
+filter java.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+findFirst java.util.stream.Stream#findFirst()Ljava/util/Optional;

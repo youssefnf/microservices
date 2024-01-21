@@ -1,0 +1,119 @@
+
+Jma.ticket.reservation.service.ReservationService#findAll()Ljava/util/List;†
+ï/D:/Preparation2/S9/JEE/ANGULARPROJECTS/ProjetEssabar/NEW/Back/ticket/reservation/src/main/java/ma/ticket/reservation/service/ReservationService.java"$ "(+"1*Å
+1#! #(6æ
+ª
+#! #(6<
+%06ma.ticket.reservation.repository.ReservationRepository"__id*k
+
+__unknown_file (O*M2
+0ma.ticket.reservation.service.ReservationService"
+reservationRepositoryN
+L
+# #(A
+carsjava.util.List"__id*"
+
+__unknown_file (
+""u
+s
+$F $(N
+%1java.lang.String"__id*I
+
+__unknown_file (-+
+)http://localhost:8888/MICROSERVICE-CLIENTv
+t
+$F $(c
+%2java.lang.String"__concat*$
+$F $(N
+
+%1java.lang.String* 
+$Q $(c
+/api/client/listt
+r
+%F %(N
+%3java.lang.String"__id*H
+
+__unknown_file (,*
+(http://localhost:8888/MICROSERVICE-EVENTp
+n
+%F %(]
+%4java.lang.String"__concat*$
+%F %(N
+
+%3java.lang.String*
+%Q %(]
+
+/api/eventh
+f
+' '(.0
+clients%ma.ticket.reservation.entity.Client[]"__id*"
+
+__unknown_file (
+""f
+d
+( ((-.
+events$ma.ticket.reservation.entity.Event[]"__id*"
+
+__unknown_file (
+""§°
+) )(
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*4
+
+__unknown_file (
+
+carsjava.util.List2stream()¶
+£
+)! )(s!
+%6java.util.function.Function"__declareFunction*a
+
+__unknown_file (EC
+A__sonar_lambda_0$ma.ticket.reservation.service.ReservationService£
+†
+
+__unknown_file (.
+!
+%6java.util.function.Function"	
+clients"__id*N
+
+__unknown_file (2
+0
+clients%ma.ticket.reservation.entity.Client[]†
+ù
+
+__unknown_file (-
+!
+%6java.util.function.Function"
+events"__id*L
+
+__unknown_file (0
+.
+events$ma.ticket.reservation.entity.Event[]µ
+≤
+
+__unknown_file (>
+!
+%6java.util.function.Function"
+ReservationService.this"__id*P
+
+__unknown_file (42
+0ma.ticket.reservation.service.ReservationService£†
+) )(t
+%8java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%6java.util.function.Function2"map(Ljava/util/function/Function;)úô
+) )(}
+%9java.util.List"0java.util.stream.Stream#toList()Ljava/util/List;*;
+
+__unknown_file (
+
+%8java.util.stream.Stream2toList()""
+) )(~
+
+%9java.util.ListB42
+0ma.ticket.reservation.service.ReservationServiceH

@@ -1,0 +1,33 @@
+<mat-card class="add-client-card">
+    <h2 class="form-title">Ajouter Reservation</h2>
+    <form #reservationForm="ngForm" class="add-client-form" (submit)="addNewReservation(reservationForm.value)">
+
+            <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Client</mat-label>
+            <mat-select [(ngModel)]="selectedClient" name="selectedClient">
+                <mat-option *ngFor="let clts of clients" [value]="clts.nom">{{ clts.nom + ' '+ clts.prenom | titlecase
+                    }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Evenement</mat-label>
+            <mat-select [(ngModel)]="selectedEvenement" name="selectedEvenement">
+                <mat-option *ngFor="let evnts of evenements" [value]="evnts.nom">{{ evnts.nom | titlecase
+                    }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Nombre de ticket</mat-label>
+            <input matInput [(ngModel)]="reservation.nbTicket" type="number"
+                name="nbTicket" />
+        </mat-form-field>
+  
+        <button type="submit" mat-raised-button [ngStyle]="{ 'background-color': '#2ED47A', 'color': 'white' }"
+            class="submit-button"
+            style="grid-column: span 4; width: 150px;margin: auto;"><mat-icon>save_alt</mat-icon>Enregistrer</button>
+
+
+    </form>
+</mat-card>

@@ -1,0 +1,10 @@
+<h1 mat-dialog-title class="dialog-title">Supprimer l'évenement </h1>
+<div mat-dialog-content>
+  <p class="dialog-content">Êtes-vous sûr de vouloir supprimer cet évenement ?</p>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button mat-dialog-close color="primary" class="cancel-button">Annuler</button>
+  <button mat-button color="warn" class="delete-button" (click)="onDeleteClick()">
+    Supprimer
+  </button>
+</div>

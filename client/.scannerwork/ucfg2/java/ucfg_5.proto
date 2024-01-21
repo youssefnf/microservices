@@ -1,0 +1,36 @@
+
+gma.ticket.client.service.ClientServiceImpl#findClient(Ljava/lang/Long;)Lma/ticket/client/entity/Client;o
+e/D:/5MG/Projects/qualite/backend/client/src/main/java/ma/ticket/client/service/ClientServiceImpl.java6 6("startingBlock*þ
+startingBlock6 6(%‡
+„
+5 5(
+%1"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*2
+
+__unknown_file (
+
+idjava.lang.LongT
+R
+6" 6($
+idjava.lang.Long"__annotation*"
+
+__unknown_file (
+
+%1*
+1*Í
+17 7(©
+¦
+7 7(2
+%0,ma.ticket.client.repository.ClientRepository"__id*`
+
+__unknown_file (D*B,
+*ma.ticket.client.service.ClientServiceImpl"
+clientRepository"
+7 7(3
+"": 
+6 6($
+idjava.lang.LongB.,
+*ma.ticket.client.service.ClientServiceImplH

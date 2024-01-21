@@ -1,0 +1,130 @@
+
+Úma.ticket.reservation.service.ReservationService#mapToReservationResponse(Lma/ticket/reservation/entity/Reservation;[Lma/ticket/reservation/entity/Client;[Lma/ticket/reservation/entity/Event;)Lma/ticket/reservation/models/ReservationResponse;†
+ï/D:/Preparation2/S9/JEE/ANGULARPROJECTS/ProjetEssabar/NEW/Back/ticket/reservation/src/main/java/ma/ticket/reservation/service/ReservationService.javaB  B(8"1*â
+1C C(#ı
+Ú
+C C(3
+%0java.util.stream.Stream"Ejava.util.Arrays#stream([Ljava/lang/Object;)Ljava/util/stream/Stream;*0
+
+__unknown_file ("
+java.util.Arrays*N
+
+__unknown_file (2
+0
+clients%ma.ticket.reservation.entity.Client[]ß
+§
+D D(X"
+%1java.util.function.Predicate"__declareFunction*a
+
+__unknown_file (EC
+A__sonar_lambda_1$ma.ticket.reservation.service.ReservationServiceØ
+¨
+
+__unknown_file (3
+"
+%1java.util.function.Predicate"
+reservation"__id*U
+
+__unknown_file (9
+7
+reservation(ma.ticket.reservation.entity.Reservation¨©
+C D(Y
+%2java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%0java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%1java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)™ß
+C E(
+%3java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream2findFirst()ÒÓ
+C F()
+%4#ma.ticket.reservation.entity.Client"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%3java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)ê
+ç
+C F(2
+foundClient#ma.ticket.reservation.entity.Client"__id*G
+
+__unknown_file (+
+)
+%4#ma.ticket.reservation.entity.ClientÛ
+
+H H(0
+%5java.util.stream.Stream"Ejava.util.Arrays#stream([Ljava/lang/Object;)Ljava/util/stream/Stream;*0
+
+__unknown_file ("
+java.util.Arrays*L
+
+__unknown_file (0
+.
+events$ma.ticket.reservation.entity.Event[]ß
+§
+I I(U"
+%6java.util.function.Predicate"__declareFunction*a
+
+__unknown_file (EC
+A__sonar_lambda_2$ma.ticket.reservation.service.ReservationServiceØ
+¨
+
+__unknown_file (3
+"
+%6java.util.function.Predicate"
+reservation"__id*U
+
+__unknown_file (9
+7
+reservation(ma.ticket.reservation.entity.Reservation¨©
+H I(V
+%7java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%6java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)™ß
+H J(
+%8java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream2findFirst()Ì
+H K((
+%9"ma.ticket.reservation.entity.Event"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%8java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)ç
+ä
+H K(0
+
+foundEvent"ma.ticket.reservation.entity.Event"__id*F
+
+__unknown_file (*
+(
+%9"ma.ticket.reservation.entity.Event"
+M R(
+"":C
+B9 B(Q7
+reservation(ma.ticket.reservation.entity.Reservation:<
+BR B(c0
+clients%ma.ticket.reservation.entity.Client[]::
+Bd B(r.
+events$ma.ticket.reservation.entity.Event[]B42
+0ma.ticket.reservation.service.ReservationService

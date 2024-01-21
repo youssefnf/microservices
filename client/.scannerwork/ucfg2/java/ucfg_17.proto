@@ -1,0 +1,63 @@
+
+fma.ticket.client.controller.ClientController#findClt(Ljava/lang/Long;)Lma/ticket/client/entity/Client;q
+g/D:/5MG/Projects/qualite/backend/client/src/main/java/ma/ticket/client/controller/ClientController.java( (("startingBlock*ª
+startingBlock( ((4ƒ
+€
+' '(
+%2"
+__annotate**
+
+__unknown_file (
+
+GetMapping*6
+
+__unknown_file (
+
+userIdjava.lang.Long…
+‚
+( (('
+%3"
+__annotate*,
+
+__unknown_file (
+PathVariable*6
+
+__unknown_file (
+
+userIdjava.lang.Long|
+z
+(- ((3
+userIdjava.lang.Long"__annotation*"
+
+__unknown_file (
+
+%2*"
+
+__unknown_file (
+
+%3*
+1*¯
+1* *(¦
+£
+* *(0
+%0*ma.ticket.client.service.ClientServiceImpl"__id*_
+
+__unknown_file (C*A.
+,ma.ticket.client.controller.ClientController"
+clientServiceÂ¿
+* *(/$
+%1ma.ticket.client.entity.Client"gma.ticket.client.service.ClientServiceImpl#findClient(Ljava/lang/Long;)Lma/ticket/client/entity/Client;*N
+
+__unknown_file (2
+0
+%0*ma.ticket.client.service.ClientServiceImpl*6
+
+__unknown_file (
+
+userIdjava.lang.Long2findClient(Ljava/lang/Long;)"2
+* *(2&
+$
+%1ma.ticket.client.entity.Client:$
+( ((3
+userIdjava.lang.LongB0.
+,ma.ticket.client.controller.ClientControllerH
